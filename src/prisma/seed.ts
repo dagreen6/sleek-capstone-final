@@ -9,8 +9,8 @@ async function main() {
     where: { userId: cuid() },
     update: {},
     create: {
-      fullName: "Kaws",
-      email: "kaws@gmail.com",
+      fullName: "BBCS Data Systems",
+      email: "bbcs.sleek@gmail.com",
       password: bcrypt.hashSync("!JesusReigns2022", bcrypt.genSaltSync(10)),
       role: "admin",
       image: "",
