@@ -3,10 +3,11 @@ import Stack from "@mui/material/Stack";
 
 import SelectInput from "@/components/parts/SelectInput";
 import { OpenInNew } from "@mui/icons-material";
-import { Paper, Typography } from "@mui/material";
+import { Button, Paper, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import EarningChart from "./EarningsChart";
 import { useHooks } from "./hooks";
+import { useRouter } from "next/router";
 
 const AdminDashboard = () => {
   const {
@@ -17,6 +18,9 @@ const AdminDashboard = () => {
     totalEarnings,
     data,
   } = useHooks();
+
+
+  const router = useRouter()
 
   return (
     <>
@@ -30,6 +34,7 @@ const AdminDashboard = () => {
             display="flex"
             flexDirection="column"
             gap={5}
+            // sx={{ border: '3px solid red' }} 
           >
             <Typography fontWeight={700} fontSize={18}>
               Company Metrics
@@ -49,7 +54,9 @@ const AdminDashboard = () => {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={8}>
-          <Stack height={450} boxShadow={1} p={2} borderRadius={1}>
+          <Stack height={450} boxShadow={1} p={2} borderRadius={1} 
+          // sx={{ border: '2px solid blue'}}
+          >
             <Box display="flex" justifyContent="space-between">
               <Typography fontWeight={700} fontSize={18}>
                 Earnings
@@ -91,6 +98,12 @@ const AdminDashboard = () => {
           </Stack>
         </Grid>
       </Grid>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', width: '100%'}}>
+      {/* <Button variant='contained' onClick={() => router.push('/order-management')}
+      
+      
+      >BBBBBBCSSS</Button> */}
+      </div>
       <Grid container spacing={4} marginTop={1}>
         <Grid item xs={12} lg={4} display={{ md: "block", xs: "block" }}>
           <Stack height={260} boxShadow={1} borderRadius={1}>

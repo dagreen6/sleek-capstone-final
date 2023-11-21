@@ -58,29 +58,29 @@ const StaffListTable = () => {
       minWidth: 100,
       renderCell: (params) => params.row.projectAssignee.length,
     },
-    {
-      field: "Action",
-      type: "actions",
-      align: "right",
-      width: 100,
-      minWidth: 60,
-      getActions: (params) => getActionMenu(params),
-    },
+    // {
+    //   field: "Action",
+    //   type: "actions",
+    //   align: "right",
+    //   width: 100,
+    //   minWidth: 60,
+    //   getActions: (params) => getActionMenu(params),
+    // },
   ];
 
-  const getActionMenu = (params: GridRowParams): JSX.Element[] => {
-    return [
-      <MoreVertMenu
-        key={params.row.id}
-        options={[
-          {
-            label: "Edit",
-            onClick: () => console.log(params.row.id),
-          },
-        ]}
-      />,
-    ];
-  };
+  // const getActionMenu = (params: GridRowParams): JSX.Element[] => {
+  //   return [
+  //     <MoreVertMenu
+  //       key={params.row.id}
+  //       options={[
+  //         {
+  //           label: "Edit",
+  //           onClick: () => console.log(params.row.id),
+  //         },
+  //       ]}
+  //     />,
+  //   ];
+  // };
 
   return (
     <DataGrid

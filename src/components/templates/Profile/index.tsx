@@ -102,7 +102,7 @@ const Profile = () => {
               onChange={() => setIsChangePasswordOnly(!isChangePasswordOnly)}
             />
             <Typography variant="caption">
-              Check this portin if you only need to update password
+              Check this portion if you only need to update password
             </Typography>
           </Box>
         </Stack>
